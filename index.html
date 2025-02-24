@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Note</title>
+    <title>Dynamic List with Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
-<body>
-    <ol id="list"></ol>
+
+<body class="container mx-auto bg-gray-100 p-6">
+    <h1 class="text-4xl font-bold mb-6 text-[#8a03b5]">Add Your Notes</h1>
+    <section class="grid md:grid-cols-2 items-center ">
+        <div class="max-w-lg mx-auto">
+            <!-- Heading -->
+            <h1 class="text-4xl font-bold mb-6 text-[#8a03b5]">Add Your Notes</h1>
+
+            <!-- Ordered List -->
+            <ol id="ol-list" class="list-decimal list-inside space-y-2 pl-5">
+                <!-- List starts empty -->
+            </ol>
+
+            <!-- Input and Button -->
+            <div class="mt-6 flex flex-col sm:flex-row gap-4">
+                <input type="text" id="input-item" placeholder="Enter new item"
+                    class="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8a03b5] focus:border-transparent">
+                <button id="btn-add"
+                    class="px-6 py-2 bg-[#8a03b5] text-white rounded-lg hover:bg-[#6b0288] transition-colors">Add
+                    +</button>
+            </div>
+        </div>
+        <div>
+            <img class="mx-auto w-72 pt-6" src="assets/notes-img.svg" alt="">
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
 </body>
+
 </html>
